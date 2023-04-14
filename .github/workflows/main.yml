@@ -20,11 +20,11 @@ jobs:
         run: |
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
       - name: install pip packages
-      pip install requests
-      pip install zhdate
-      pip freeze > requirements.txt
         run: |
           python -m pip install --upgrade pip
+          pip install requests
+          pip install zhdate
+          pip freeze > requirements.txt
           pip3 install -r requirements.txt
       - name: weixin
         run: |
